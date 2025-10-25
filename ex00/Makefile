@@ -1,4 +1,4 @@
-NAME = zombie
+NAME = ex00
 SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 HEADERS = Zombie.hpp
 CXX = c++

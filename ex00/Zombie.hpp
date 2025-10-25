@@ -20,9 +20,13 @@
 class Zombie {
 
 public:
-  Zombie(void);
-  Zombie(std::string name);
+  Zombie(std::string const &name = "unknown");
   ~Zombie(void);
+
+  Zombie *operator=(std::string const &name);
+  Zombie *operator=(Zombie &zombie);
+
+  void setName(std::string const &name);
   void announce(void);
 
 protected:

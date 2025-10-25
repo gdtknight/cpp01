@@ -11,5 +11,14 @@
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#include <cstdlib>
 
-int main(int argc, char *argv[]) { return (0); }
+int main(void) {
+  Zombie *zombie;
+
+  zombie = newZombie("newZombie");
+  zombie->announce();
+  delete zombie;
+  randomChump("another zombie");
+  return (EXIT_SUCCESS);
+}
