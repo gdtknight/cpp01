@@ -1,8 +1,24 @@
-NAME = harlFilter
-SRCS = main.cpp Harl.cpp
-HEADERS = Harl.hpp
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/11/02 17:30:00 by yoshin            #+#    #+#              #
+#    Updated: 2025/11/02 17:30:00 by yoshin           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+
+NAME = harlFilter
+
+SRCS = main.cpp Harl.cpp
+HEADERS = Harl.hpp
+
+.PHONY: all clean fclean re dev
 
 all: $(NAME)
 
@@ -16,4 +32,5 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+dev: $(SRCS) $(HEADERS)
+	$(CXX) $(CXXFLAGS) $(SRCS) -g -o $(NAME)
