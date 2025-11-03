@@ -6,7 +6,7 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 16:47:52 by yoshin            #+#    #+#             */
-/*   Updated: 2025/10/25 16:47:52 by yoshin           ###   ########.fr       */
+/*   Updated: 2025/11/03 16:56:55 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Zombie *Zombie::operator=(std::string const &name) {
   return (this);
 }
 
-Zombie *Zombie::operator=(Zombie &zombie) {
+Zombie *Zombie::operator=(Zombie const &zombie) {
   if (this != &zombie)
     this->name = zombie.name;
   return (this);

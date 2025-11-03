@@ -6,7 +6,7 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:01:06 by yoshin            #+#    #+#             */
-/*   Updated: 2025/10/24 16:03:42 by yoshin           ###   ########.fr       */
+/*   Updated: 2025/11/03 15:22:42 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
   ~Zombie(void);
 
   Zombie *operator=(std::string const &name);
-  Zombie *operator=(Zombie &zombie);
+  Zombie *operator=(Zombie const &zombie);
 
   void setName(std::string const &name);
   void announce(void);
